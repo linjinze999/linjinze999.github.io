@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Replication Configuration | 林锦泽的个人博客</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/logo.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <script src="/assets/js/article.js"></script>
+    
+    <link rel="preload" href="/assets/css/0.styles.5a5b4bf9.css" as="style"><link rel="preload" href="/assets/js/app.6684e293.js" as="script"><link rel="preload" href="/assets/js/11.eef83efc.js" as="script"><link rel="prefetch" href="/assets/js/1.ed08d72e.js"><link rel="prefetch" href="/assets/js/3.9793400d.js"><link rel="prefetch" href="/assets/js/4.615874cf.js"><link rel="prefetch" href="/assets/js/5.03ea8fd0.js"><link rel="prefetch" href="/assets/js/6.954e6320.js"><link rel="prefetch" href="/assets/js/7.580f295f.js"><link rel="prefetch" href="/assets/js/8.06959a65.js"><link rel="prefetch" href="/assets/js/9.62a40464.js"><link rel="prefetch" href="/assets/js/10.d1f5e796.js"><link rel="prefetch" href="/assets/js/12.499fc7e6.js"><link rel="prefetch" href="/assets/js/13.09bd8568.js"><link rel="prefetch" href="/assets/js/14.ab98d42a.js"><link rel="prefetch" href="/assets/js/15.a1eadf2a.js"><link rel="prefetch" href="/assets/js/16.9afdb1ca.js"><link rel="prefetch" href="/assets/js/17.21c8fcc7.js"><link rel="prefetch" href="/assets/js/18.6486cbac.js"><link rel="prefetch" href="/assets/js/19.05c41371.js"><link rel="prefetch" href="/assets/js/20.d57f5c12.js"><link rel="prefetch" href="/assets/js/21.95213b4b.js"><link rel="prefetch" href="/assets/js/22.fe902164.js"><link rel="prefetch" href="/assets/js/23.c8c1babf.js"><link rel="prefetch" href="/assets/js/24.f7f4f4b1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5a5b4bf9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      林锦泽的个人博客
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="https://linjinze999.github.io/uni/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Uni组件库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/gerrit/" class="nav-link router-link-active">Gerrit运维</a></div><div class="nav-item"><a href="https://linjinze999.github.io/vue-llplatform/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-llplatform
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">学习资料</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/learning/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/learning/vue/" class="nav-link">Vue</a></li></ul></div></div><a href="https://github.com/linjinze999" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://linjinze999.github.io/uni/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Uni组件库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/gerrit/" class="nav-link router-link-active">Gerrit运维</a></div><div class="nav-item"><a href="https://linjinze999.github.io/vue-llplatform/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-llplatform
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">学习资料</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/learning/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/learning/vue/" class="nav-link">Vue</a></li></ul></div></div><a href="https://github.com/linjinze999" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><div class="carbon-ads"></div><ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Replication Configuration</span><!----></p><ul class="sidebar-group-items"><li><a href="/gerrit/distribute-config/#enabling-replication" class="sidebar-link">Enabling Replication</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/gerrit/distribute-config/#file-replication-config" class="sidebar-link">File replication.config</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#gerrit-replicateonstartup" class="sidebar-link">gerrit.replicateOnStartup</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#gerrit-autoreload" class="sidebar-link">gerrit.autoReload</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#gerrit-defaultforceupdate" class="sidebar-link">gerrit.defaultForceUpdate</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#replication-lockerrormaxretries" class="sidebar-link">replication.lockErrorMaxRetries</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#replication-maxretries" class="sidebar-link">replication.maxRetries</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#replication-eventsdirectory" class="sidebar-link">replication.eventsDirectory</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-url" class="sidebar-link">remote.NAME.url</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-adminurl" class="sidebar-link">remote.NAME.adminUrl</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-receivepack" class="sidebar-link">remote.NAME.receivepack</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-uploadpack" class="sidebar-link">remote.NAME.uploadpack</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-push" class="sidebar-link">remote.NAME.push</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-timeout" class="sidebar-link">remote.NAME.timeout</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-replicationdelay" class="sidebar-link">remote.NAME.replicationDelay</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-rescheduledelay" class="sidebar-link">remote.NAME.rescheduleDelay</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-replicationretry" class="sidebar-link">remote.NAME.replicationRetry</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-replicationmaxretries" class="sidebar-link">remote.NAME.replicationMaxRetries</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-threads" class="sidebar-link">remote.NAME.threads</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-authgroup" class="sidebar-link">remote.NAME.authGroup</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-createmissingrepositories" class="sidebar-link">remote.NAME.createMissingRepositories</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-replicatepermissions" class="sidebar-link">remote.NAME.replicatePermissions</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-replicateprojectdeletions" class="sidebar-link">remote.NAME.replicateProjectDeletions</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-replicatehiddenprojects" class="sidebar-link">remote.NAME.replicateHiddenProjects</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-mirror" class="sidebar-link">remote.NAME.mirror</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-remotenamestyle" class="sidebar-link">remote.NAME.remoteNameStyle</a></li><li class="sidebar-sub-header"><a href="/gerrit/distribute-config/#remote-name-projects" class="sidebar-link">remote.NAME.projects</a></li></ul></li><li><a href="/gerrit/distribute-config/#file-secure-config" class="sidebar-link">File secure.config</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/gerrit/distribute-config/#file-ssh-config" class="sidebar-link">File ~/.ssh/config</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="replication-configuration"><a href="#replication-configuration" aria-hidden="true" class="header-anchor">#</a> Replication Configuration</h1><h2 id="enabling-replication"><a href="#enabling-replication" aria-hidden="true" class="header-anchor">#</a> Enabling Replication</h2><p>If replicating over SSH, ensure the host key of the remote system(s) is already in the Gerrit user's <code>~/.ssh/known_hosts</code> file. The easiest way to add the host key is to connect once by hand with the command line:</p><div class="language- line-numbers-mode"><pre class="language-text"><code>  sudo su -c 'ssh mirror1.us.some.org echo' gerrit2
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>  [remote &quot;host-one&quot;]
+    url = gerrit2@host-one.example.com:/some/path/${name}.git
+
+  [remote &quot;pubmirror&quot;]
+    url = mirror1.us.some.org:/pub/git/${name}.git
+    url = mirror2.us.some.org:/pub/git/${name}.git
+    url = mirror3.us.some.org:/pub/git/${name}.git
+    push = +refs/heads/*:refs/heads/*
+    push = +refs/tags/*:refs/tags/*
+    threads = 3
+    authGroup = Public Mirror Group
+    authGroup = Second Public Mirror Group
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>Then reload the replication plugin to pick up the new configuration:</p><div class="language- line-numbers-mode"><pre class="language-text"><code>  ssh -p 29418 localhost gerrit plugin reload replication
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>To manually trigger replication at runtime, see SSH command start.</p><h2 id="file-replication-config"><a href="#file-replication-config" aria-hidden="true" class="header-anchor">#</a> File replication.config</h2><p>The optional file <code>$site_path/etc/replication.config</code> is a Git-style config file that controls the replication settings for the replication plugin.</p><p>The file is composed of one or more <code>remote</code> sections, each remote section provides common configuration settings for one or more destination URLs.</p><p>Each remote section uses its own thread pool. If pushing to multiple remotes, over differing types of network connections (e.g. LAN and also public Internet), its a good idea to put them into different remote sections, so that replication to the slower connection does not starve out the faster local one. The example file above does this.</p><p>In the keys below, the <code>NAME</code> portion is unused by this plugin, but must be unique to distinguish the different sections if more than one remote section appears in the file.</p><h3 id="gerrit-replicateonstartup"><a href="#gerrit-replicateonstartup" aria-hidden="true" class="header-anchor">#</a> gerrit.replicateOnStartup</h3><p>If true, replicates to all remotes on startup to ensure they are in-sync with this server. By default, false.</p><h3 id="gerrit-autoreload"><a href="#gerrit-autoreload" aria-hidden="true" class="header-anchor">#</a> gerrit.autoReload</h3><p>If true, automatically reloads replication destinations and settings after <code>replication.config</code> file is updated, without the need to restart the replication plugin. When the reload takes place, pending replication events based on old settings are discarded. By default, false.</p><h3 id="gerrit-defaultforceupdate"><a href="#gerrit-defaultforceupdate" aria-hidden="true" class="header-anchor">#</a> gerrit.defaultForceUpdate</h3><p>If true, the default push refspec will be set to use forced update to the remote when no refspec is given. By default, false.</p><h3 id="replication-lockerrormaxretries"><a href="#replication-lockerrormaxretries" aria-hidden="true" class="header-anchor">#</a> replication.lockErrorMaxRetries</h3><p>Number of times to retry a replication operation if a lock error is detected.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>If two or more replication operations (to the same GIT and Ref)
+are scheduled at approximately the same time (and end up on different
+replication threads), there is a large probability that the last
+push to complete will fail with a remote &quot;failure to lock&quot; error.
+This option allows Gerrit to retry the replication push when the
+&quot;failure to lock&quot; error is detected.
+
+A good value would be 3 retries or less, depending on how often
+you see lockError collisions in your server logs. A too highly set
+value risks keeping around the replication operations in the queue
+for a long time, and the number of items in the queue will increase
+with time.
+
+Normally Gerrit will succeed with the replication during its first
+retry, but in certain edge cases (e.g. a mirror introduces a ref
+namespace with the same name as a branch on the master) the retry
+will never succeed.
+
+The issue can also be mitigated somewhat by increasing the
+replicationDelay.
+
+Default: 0 (disabled, i.e. never retry)
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="replication-maxretries"><a href="#replication-maxretries" aria-hidden="true" class="header-anchor">#</a> replication.maxRetries</h3><p>Maximum number of times to retry a push operation that previously failed.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>When a push operation reaches its maximum number of retries,
+the replication event is discarded from the queue and the remote
+destinations may remain out of sync.
+
+Can be overridden at remote-level by setting replicationMaxRetries.
+
+By default, pushes are retried indefinitely.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="replication-eventsdirectory"><a href="#replication-eventsdirectory" aria-hidden="true" class="header-anchor">#</a> replication.eventsDirectory</h3><p>Directory where replication events are persisted</p><div class="language- line-numbers-mode"><pre class="language-text"><code>When scheduling a replication, the replication event is persisted
+under this directory. When the replication is done, the event is deleted.
+If plugin is stopped before all scheduled replications are done, the
+persisted events will not be deleted. When the plugin is started again,
+it will trigger all replications found under this directory.
+
+When not set, defaults to the plugin's data directory.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="remote-name-url"><a href="#remote-name-url" aria-hidden="true" class="header-anchor">#</a> remote.NAME.url</h3><p>Address of the remote server to push to. Multiple URLs may be specified within a single remote block, listing different destinations which share the same settings. Assuming sufficient threads in the thread pool, Gerrit pushes to all URLs in parallel, using one thread per URL.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Within each URL value the magic placeholder `${name}` is
+replaced with the Gerrit project name.  This is a Gerrit
+specific extension to the otherwise standard Git URL syntax
+and it must be included in each URL so that Gerrit can figure
+out where each project needs to be replicated. `${name}` may
+only be omitted if the remote refers to a single repository
+(i.e.: Exactly one [remote.NAME.projects][3] and that name's
+value is a single project match.).
+
+See [git push][1] for details on Git URL syntax.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="remote-name-adminurl"><a href="#remote-name-adminurl" aria-hidden="true" class="header-anchor">#</a> remote.NAME.adminUrl</h3><p>Address of the alternative remote server only for repository creation. Multiple URLs may be specified within a single remote block, listing different destinations which share the same settings.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>The adminUrl can be used as an ssh alternative to the url
+option, but only related to repository creation.  If not
+specified, the repository creation tries to follow the default
+way through the url value specified.
+
+It is useful when the remote.NAME.url protocols do not allow
+repository creation although their usage is mandatory in the
+local environment.  In that case, an alternative SSH url could
+be specified to repository creation.
+
+To enable replication to different Gerrit instance use `gerrit+ssh://`
+as protocol name followed by hostname of another Gerrit server eg.
+
+`gerrit+ssh://replica1.my.org/`
+
+In this case replication will use Gerrit's SSH API to
+create/remove projects and update repository HEAD references.
+
+NOTE: In order to replicate project deletion, the
+link:https://gerrit-review.googlesource.com/admin/projects/plugins/delete-project delete-project[delete-project]
+plugin must be installed on the other Gerrit.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="remote-name-receivepack"><a href="#remote-name-receivepack" aria-hidden="true" class="header-anchor">#</a> remote.NAME.receivepack</h3><p>Path of the <code>git-receive-pack</code> executable on the remote system, if using the SSH transport.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Defaults to `git-receive-pack`.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="remote-name-uploadpack"><a href="#remote-name-uploadpack" aria-hidden="true" class="header-anchor">#</a> remote.NAME.uploadpack</h3><p>Path of the <code>git-upload-pack</code> executable on the remote system, if using the SSH transport.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Defaults to `git-upload-pack`.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="remote-name-push"><a href="#remote-name-push" aria-hidden="true" class="header-anchor">#</a> remote.NAME.push</h3><p>Standard Git refspec denoting what should be replicated. Setting this to <code>+refs/heads/*:refs/heads/*</code> would mirror only the active branches, but not the change refs under <code>refs/changes/</code>, or the tags under <code>refs/tags/</code>.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Note that prefixing a source refspec with `+` causes the replication
+to be done with a `git push --force` command.
+Be aware that when you are pushing to remote repositories that may
+have read/write access (e.g. GitHub) you may want to omit the `+`
+to prevent the risk of overwriting branches that have been modified
+on the remote.
+
+Multiple push keys can be supplied, to specify multiple
+patterns to match against.  In the [example above][2], remote
+&quot;pubmirror&quot; uses two push keys to match both `refs/heads/*`
+and `refs/tags/*`, but excludes all others, including
+`refs/changes/*`.
+
+Defaults to `refs/*:refs/*` (push all refs) if not specified,
+or `+refs/*:refs/*` (force push all refs) if not specified and
+`gerrit.defaultForceUpdate` is true.
+
+Note that the `refs/meta/config` branch is only replicated
+when `replicatePermissions` is true, even if the push refspec
+is 'all refs'.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="remote-name-timeout"><a href="#remote-name-timeout" aria-hidden="true" class="header-anchor">#</a> remote.NAME.timeout</h3><p>Number of seconds to wait for a network read or write to complete before giving up and declaring the remote side is not responding. If 0, there is no timeout, and the push client waits indefinitely.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>A timeout should be large enough to mostly transfer the
+objects to the other side.  1 second may be too small for
+larger projects, especially over a WAN link, while 10-30
+seconds is a much more reasonable timeout value.
+
+Defaults to 0 seconds, wait indefinitely.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="remote-name-replicationdelay"><a href="#remote-name-replicationdelay" aria-hidden="true" class="header-anchor">#</a> remote.NAME.replicationDelay</h3><p>Time to wait before scheduling a remote push operation. Setting the delay to 0 effectively disables the delay, causing the push to start as soon as possible.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>This is a Gerrit specific extension to the Git remote block.
+
+By default, 15 seconds.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="remote-name-rescheduledelay"><a href="#remote-name-rescheduledelay" aria-hidden="true" class="header-anchor">#</a> remote.NAME.rescheduleDelay</h3><p>Delay when rescheduling a push operation due to an in-flight push running for the same project.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Cannot be set to a value lower than 3 seconds to avoid a tight loop
+of schedule/run which could cause 1K+ retries per second.
+
+A configured value lower than 3 seconds will be rounded to 3 seconds.
+
+By default, 3 seconds.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="remote-name-replicationretry"><a href="#remote-name-replicationretry" aria-hidden="true" class="header-anchor">#</a> remote.NAME.replicationRetry</h3><p>Time to wait before scheduling a remote push operation previously failed due to an offline remote server.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>If a remote push operation fails because a remote server was
+offline, all push operations to the same destination URL are
+blocked, and the remote push is continuously retried unless
+the replicationMaxRetries value is set.
+
+This is a Gerrit specific extension to the Git remote block.
+
+By default, 1 minute.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="remote-name-replicationmaxretries"><a href="#remote-name-replicationmaxretries" aria-hidden="true" class="header-anchor">#</a> remote.NAME.replicationMaxRetries</h3><p>Maximum number of times to retry a push operation that previously failed.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>When a push operation reaches its maximum number of retries
+the replication event is discarded from the queue and the remote
+destinations could be out of sync.
+
+This is a Gerrit specific extension to the Git remote block.
+
+By default, use replication.maxRetries.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="remote-name-threads"><a href="#remote-name-threads" aria-hidden="true" class="header-anchor">#</a> remote.NAME.threads</h3><p>Number of worker threads to dedicate to pushing to the repositories described by this remote. Each thread can push one project at a time, to one destination URL. Scheduling within the thread pool is done on a per-project basis. If a remote block describes 4 URLs, allocating 4 threads in the pool will permit some level of parallel pushing.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>By default, 1 thread.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="remote-name-authgroup"><a href="#remote-name-authgroup" aria-hidden="true" class="header-anchor">#</a> remote.NAME.authGroup</h3><p>Specifies the name of a group that the remote should use to access the repositories. Multiple authGroups may be specified within a single remote block to signify a wider access right. In the project administration web interface the read access can be specified for this group to control if a project should be replicated or not to the remote.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>By default, replicates without group control, i.e. replicates
+everything to all remotes.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="remote-name-createmissingrepositories"><a href="#remote-name-createmissingrepositories" aria-hidden="true" class="header-anchor">#</a> remote.NAME.createMissingRepositories</h3><p>If true, a repository is automatically created on the remote site. If the remote site was not available at the moment when a new project was created, it will be created if during the replication of a ref it is found to be missing.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>If false, repositories are never created automatically on this
+remote.
+
+By default, true, missing repositories are created.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="remote-name-replicatepermissions"><a href="#remote-name-replicatepermissions" aria-hidden="true" class="header-anchor">#</a> remote.NAME.replicatePermissions</h3><p>If true, permissions-only projects and the refs/meta/config branch will also be replicated to the remote site. These projects and branches may be needed to keep a backup or slave server current.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>By default, true, replicating everything.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="remote-name-replicateprojectdeletions"><a href="#remote-name-replicateprojectdeletions" aria-hidden="true" class="header-anchor">#</a> remote.NAME.replicateProjectDeletions</h3><p>If true, project deletions will also be replicated to the remote site.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>By default, false, do *not* replicate project deletions.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="remote-name-replicatehiddenprojects"><a href="#remote-name-replicatehiddenprojects" aria-hidden="true" class="header-anchor">#</a> remote.NAME.replicateHiddenProjects</h3><p>If true, hidden projects will be replicated to the remote site.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>By default, false, do *not* replicate hidden projects.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="remote-name-mirror"><a href="#remote-name-mirror" aria-hidden="true" class="header-anchor">#</a> remote.NAME.mirror</h3><p>If true, replication will remove remote branches that are absent locally or invisible to the replication (for example read access denied via authGroup option).</p><div class="language- line-numbers-mode"><pre class="language-text"><code>By default, false, do not remove remote branches.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="remote-name-remotenamestyle"><a href="#remote-name-remotenamestyle" aria-hidden="true" class="header-anchor">#</a> remote.NAME.remoteNameStyle</h3><p>Provides possibilities to influence the name of the target repository, e.g. by replacing slashes in the <code>${name}</code> placeholder.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Github and Gitorious do not permit slashes &quot;/&quot; in repository
+names and will change them to dashes &quot;-&quot; at repository creation
+time.
+
+If this setting is set to &quot;dash&quot;, slashes will be replaced with
+dashes in the remote repository name. If set to &quot;underscore&quot;,
+slashes will be replaced with underscores in the repository name.
+
+Option &quot;basenameOnly&quot; makes `${name}` to be only the basename
+(the part after the last slash) of the repository path on the
+Gerrit server, e.g. `${name}` of `foo/bar/my-repo.git` would
+be `my-repo`.
+
+By default, &quot;slash&quot;, i.e. remote names will contain slashes as
+they do in Gerrit.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="remote-name-projects"><a href="#remote-name-projects" aria-hidden="true" class="header-anchor">#</a> remote.NAME.projects</h3><p>Specifies which repositories should be replicated to the remote. It can be provided more than once, and supports three formats: regular expressions, wildcard matching, and single project matching. All three formats match case-sensitive.</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Values starting with a caret `^` are treated as regular
+expressions. `^foo/(bar|baz)` would match the projects
+`foo/bar`, and `foo/baz`. Regular expressions have to fully
+match the project name. So the above example would not match
+`foo/bar2`, while `^foo/(bar|baz).*` would.
+
+Projects may be excluded from replication by using a regular
+expression with inverse match. `^(?:(?!PATTERN).)*$` will
+exclude any project that matches.
+
+Values that are not regular expressions and end in `*` are
+treated as wildcard matches. Wildcards match projects whose
+name agrees from the beginning until the trailing `*`. So
+`foo/b*` would match the projects `foo/b`, `foo/bar`, and
+`foo/baz`, but neither `foobar`, nor `bar/foo/baz`.
+
+Values that are neither regular expressions nor wildcards are
+treated as single project matches. So `foo/bar` matches only
+the project `foo/bar`, but no other project.
+
+By default, replicates without matching, i.e. replicates
+everything to all remotes.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h2 id="file-secure-config"><a href="#file-secure-config" aria-hidden="true" class="header-anchor">#</a> File <code>secure.config</code></h2><p>The optional file <code>$site_path/secure.config</code> is a Git-style config file that provides secure values that should not be world-readable, such as passwords. Passwords for HTTP remotes can be obtained from this file.</p><p>remote.NAME.username :	Username to use for HTTP authentication on this remote, if not given in the URL.</p><p>remote.NAME.password :	Password to use for HTTP authentication on this remote.</p><h2 id="file-ssh-config"><a href="#file-ssh-config" aria-hidden="true" class="header-anchor">#</a> File <code>~/.ssh/config</code></h2><p>If present, Gerrit reads and caches ~/.ssh/config at startup, and supports most SSH configuration options. For example:</p><div class="language- line-numbers-mode"><pre class="language-text"><code>  Host host-one.example.com
+    IdentityFile ~/.ssh/id_hostone
+    PreferredAuthentications publickey
+
+  Host mirror*.us.some.org
+    User mirror-updater
+    IdentityFile ~/.ssh/id_pubmirror
+    PreferredAuthentications publickey
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>Supported options:</p><ul><li>Host</li><li>Hostname</li><li>User</li><li>Port</li><li>IdentityFile</li><li>PreferredAuthentications</li><li>StrictHostKeyChecking</li></ul><p>SSH authentication must be by passwordless public key, as there is no facility to read passphrases on startup or passwords during the SSH connection setup, and SSH agents are not supported from Java.</p><p>Host keys for any destination SSH servers must appear in the user's <code>~/.ssh/known_hosts</code> file, and must be added in advance, before Gerrit starts. If a host key is not listed, Gerrit will be unable to connect to that destination, and replication to that URL will fail.</p></div><div class="page-edit"><div class="edit-link"><a href="https://github.com/linjinze999/blog-vuepress/edit/master/docs/gerrit/distribute-config/README.md" target="_blank" rel="noopener noreferrer">帮我改进此页</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><div class="last-updated"><span class="prefix">上次更新: </span><span class="time">2018-8-7 10:13:56</span></div></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/gerrit/distribute.html#主系统配置" class="prev">
+          分布式部署
+        </a></span><!----></p></div><div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></div></div></div>
+    <script src="/assets/js/11.eef83efc.js" defer></script><script src="/assets/js/app.6684e293.js" defer></script>
+  </body>
+</html>

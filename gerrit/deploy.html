@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>系统部署 | 林锦泽的个人博客</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/logo.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <script src="/assets/js/article.js"></script>
+    
+    <link rel="preload" href="/assets/css/0.styles.5a5b4bf9.css" as="style"><link rel="preload" href="/assets/js/app.6684e293.js" as="script"><link rel="preload" href="/assets/js/9.62a40464.js" as="script"><link rel="prefetch" href="/assets/js/11.eef83efc.js"><link rel="prefetch" href="/assets/js/1.ed08d72e.js"><link rel="prefetch" href="/assets/js/3.9793400d.js"><link rel="prefetch" href="/assets/js/4.615874cf.js"><link rel="prefetch" href="/assets/js/5.03ea8fd0.js"><link rel="prefetch" href="/assets/js/6.954e6320.js"><link rel="prefetch" href="/assets/js/7.580f295f.js"><link rel="prefetch" href="/assets/js/8.06959a65.js"><link rel="prefetch" href="/assets/js/10.d1f5e796.js"><link rel="prefetch" href="/assets/js/12.499fc7e6.js"><link rel="prefetch" href="/assets/js/13.09bd8568.js"><link rel="prefetch" href="/assets/js/14.ab98d42a.js"><link rel="prefetch" href="/assets/js/15.a1eadf2a.js"><link rel="prefetch" href="/assets/js/16.9afdb1ca.js"><link rel="prefetch" href="/assets/js/17.21c8fcc7.js"><link rel="prefetch" href="/assets/js/18.6486cbac.js"><link rel="prefetch" href="/assets/js/19.05c41371.js"><link rel="prefetch" href="/assets/js/20.d57f5c12.js"><link rel="prefetch" href="/assets/js/21.95213b4b.js"><link rel="prefetch" href="/assets/js/22.fe902164.js"><link rel="prefetch" href="/assets/js/23.c8c1babf.js"><link rel="prefetch" href="/assets/js/24.f7f4f4b1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5a5b4bf9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      林锦泽的个人博客
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="https://linjinze999.github.io/uni/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Uni组件库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/gerrit/" class="nav-link router-link-active">Gerrit运维</a></div><div class="nav-item"><a href="https://linjinze999.github.io/vue-llplatform/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-llplatform
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">学习资料</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/learning/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/learning/vue/" class="nav-link">Vue</a></li></ul></div></div><a href="https://github.com/linjinze999" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://linjinze999.github.io/uni/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Uni组件库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/gerrit/" class="nav-link router-link-active">Gerrit运维</a></div><div class="nav-item"><a href="https://linjinze999.github.io/vue-llplatform/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-llplatform
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">学习资料</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/learning/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/learning/vue/" class="nav-link">Vue</a></li></ul></div></div><a href="https://github.com/linjinze999" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><div class="carbon-ads"></div><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Gerrit运维</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/gerrit/" class="sidebar-link">Gerrit介绍</a></li><li><a href="/gerrit/deploy.html" class="active sidebar-link">系统部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/gerrit/deploy.html#安装环境" class="sidebar-link">安装环境</a></li><li class="sidebar-sub-header"><a href="/gerrit/deploy.html#下载war包" class="sidebar-link">下载war包</a></li><li class="sidebar-sub-header"><a href="/gerrit/deploy.html#安装系统" class="sidebar-link">安装系统</a></li><li class="sidebar-sub-header"><a href="/gerrit/deploy.html#域名配置" class="sidebar-link">域名配置</a></li></ul></li><li><a href="/gerrit/config.html" class="sidebar-link">系统配置</a></li><li><a href="/gerrit/upgrade.html" class="sidebar-link">系统升级</a></li><li><a href="/gerrit/distribute.html" class="sidebar-link">分布式部署</a></li><li><a href="/gerrit/extend.html" class="sidebar-link">扩展</a></li><li><a href="/gerrit/develop.html" class="sidebar-link">开发</a></li><li><a href="/gerrit/question.html" class="sidebar-link">Q&amp;A</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="系统部署"><a href="#系统部署" aria-hidden="true" class="header-anchor">#</a> 系统部署</h1><div class="warning custom-block"><p class="custom-block-title">注意事项</p><p>操作系统： Linux。 请提前更新镜像源：<code>sudo apt-get update</code>。</p></div><h2 id="安装环境"><a href="#安装环境" aria-hidden="true" class="header-anchor">#</a> 安装环境</h2><p>可通过<code>apt-get</code>命令安装所有软件：</p><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> oracle-java8-install <span class="token function">curl</span> dirmngr <span class="token function">git</span> gitweb gnupg libcgi-pm-perl netcat procmail openssh-client <span class="token function">wget</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>创建gerrit用户（默认创建<code>/home/gerrit</code>用户目录）</p><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> adduser gerrit 
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="下载war包"><a href="#下载war包" aria-hidden="true" class="header-anchor">#</a> 下载war包</h2><p>将下载的war包拷贝至<code>/home/gerrit/gerrit-x.xx.xx.war</code></p><h4 id="国内下载"><a href="#国内下载" aria-hidden="true" class="header-anchor">#</a> 国内下载</h4><p>你可以在以下网址查看所有gerrit版本：<a href="https://gerrit-releases.storage.googleapis.com/" target="_blank" rel="noopener noreferrer">https://gerrit-releases.storage.googleapis.com/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p><p>（<strong>注意</strong>：打开是一个xml）</p><p>选择你要下载的版本，在网址后添加<code>gerrit-${GERRIT_VERSION}.war</code>即可下载，如：</p><p><code>gerrit-2.14.9.war</code>下载地址为：<a href="https://gerrit-releases.storage.googleapis.com/gerrit-2.14.9.war" target="_blank" rel="noopener noreferrer">https://gerrit-releases.storage.googleapis.com/gerrit-2.14.9.war<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p><h4 id="官网下载"><a href="#官网下载" aria-hidden="true" class="header-anchor">#</a> 官网下载</h4><p>进入官网下载：<a href="https://www.gerritcodereview.com/" target="_blank" rel="noopener noreferrer">https://www.gerritcodereview.com/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p><div class="warning custom-block"><p class="custom-block-title">注意</p><p>官网是外国网站，需要翻墙才能访问。</p></div><h2 id="安装系统"><a href="#安装系统" aria-hidden="true" class="header-anchor">#</a> 安装系统</h2><h3 id="安装数据库"><a href="#安装数据库" aria-hidden="true" class="header-anchor">#</a> 安装数据库</h3><p>若使用系统默认的h2数据库，则无需安装。这里我们改为使用mysql数据库，因此需要安装mysql服务。</p><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> mysql-server
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> mysql-client
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libmysqlclient-dev
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>安装完以后，进入mysql创建gerrit数据库：</p><div class="language- line-numbers-mode"><pre class="language-text"><code># mysql -uroot -p
+mysql&gt; CREATE USER 'gerrit2'@'localhost' IDENTIFIED BY 'password';
+mysql&gt; CREATE DATABASE reviewdb DEFAULT CHARACTER SET 'utf8';
+mysql&gt; GRANT ALL ON reviewdb.* TO 'gerrit2'@'localhost';
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="安装系统-2"><a href="#安装系统-2" aria-hidden="true" class="header-anchor">#</a> 安装系统</h3><div class="language-bash line-numbers-mode"><pre class="language-bash"><code>java -jar /home/gerrit/gerrit-2.14.9.war init -d /home/gerrit/review_site
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="tip custom-block"><p class="custom-block-title">提示</p><p>以上初始化方式需自己指定配置，若想使用默认配置，则可以加入<code>--batch</code>参数，如：</p><p><code>java -jar /home/gerrit/gerrit-2.14.9.war init --batch -d /home/gerrit/review_site</code></p></div><p>按照提示输入初始化参数：</p><div class="language-bash line-numbers-mode"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br></div><pre class="language-bash"><code>*** Gerrit Code Review 2.14.9
+*** 
+
+Create <span class="token string">'/home/gerrit/review_site'</span> <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>? （找不到初始化目录，询问是否创建，直接回车确认即可）
+
+*** Git Repositories
+*** 
+
+Location of Git repositories   <span class="token punctuation">[</span>git<span class="token punctuation">]</span>: （本地git目录地址，直接回车确认即可）
+
+*** SQL Database
+*** 
+
+Database server <span class="token function">type</span>           <span class="token punctuation">[</span>h2<span class="token punctuation">]</span>: mysql（指定数据库，默认为h2，改为mysql）
+
+Gerrit Code Review is not shipped with MySQL Connector/J 5.1.41
+**  This library is required <span class="token keyword">for</span> your configuration. **
+Download and <span class="token function">install</span> it now <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>? y（下载mysql数据库驱动，选择是；
+也可以选择否，后续自己下载对应版本的jdbc驱动拷贝至【review_site/lib】目录下，
+下载地址：http://central.maven.org/maven2/mysql/mysql-connector-java）
+Server <span class="token function">hostname</span>                <span class="token punctuation">[</span>localhost<span class="token punctuation">]</span>: （mysql地址，直接回车确认即可）
+Server port                    <span class="token punctuation">[</span><span class="token punctuation">(</span>mysql default<span class="token punctuation">)</span><span class="token punctuation">]</span>: （mysql端口，直接回车确认即可）
+Database name                  <span class="token punctuation">[</span>reviewdb<span class="token punctuation">]</span>: （数据库名，直接回车确认即可）
+Database username              <span class="token punctuation">[</span>xxxxxx<span class="token punctuation">]</span>: gerrit（数据库用户名，改为：gerrit）
+gerrit's password              <span class="token keyword">:</span> （输入数据库密码）
+              confirm password <span class="token keyword">:</span> （重复输入数据库密码）
+
+*** Index
+*** 
+
+Type                           <span class="token punctuation">[</span>lucene/?<span class="token punctuation">]</span>: （索引类型，直接回车确认即可）
+
+*** User Authentication
+*** 
+
+Authentication method          <span class="token punctuation">[</span>openid/?<span class="token punctuation">]</span>: （登录类型，直接回车确认即可）
+Enable signed push support     <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? （直接回车确认即可）
+
+*** Review Labels
+*** 
+
+Install Verified label         <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? （直接回车确认即可）
+
+*** Email Delivery
+*** 
+
+SMTP server <span class="token function">hostname</span>           <span class="token punctuation">[</span>localhost<span class="token punctuation">]</span>: （邮箱信息，直接回车确认即可）
+SMTP server port               <span class="token punctuation">[</span><span class="token punctuation">(</span>default<span class="token punctuation">)</span><span class="token punctuation">]</span>: （直接回车确认即可）
+SMTP encryption                <span class="token punctuation">[</span>none/?<span class="token punctuation">]</span>: （直接回车确认即可）
+SMTP username                  <span class="token keyword">:</span> 
+
+*** Container Process
+*** 
+
+Run as                         <span class="token punctuation">[</span>xxxx<span class="token punctuation">]</span>: gerrit （以gerrit用户运行）
+Java runtime                   <span class="token punctuation">[</span>/usr/lib/jvm/java-8-oracle/jre<span class="token punctuation">]</span>: （java_home，直接回车确认即可）
+Copy gerrit-2.14.9.war to /home/gerrit/review_site/bin/gerrit.war <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>? （直接回车确认即可）
+Copying gerrit-2.14.9.war to /home/gerrit/review_site2/bin/gerrit.war
+
+*** SSH Daemon
+*** 
+
+Listen on address              <span class="token punctuation">[</span>*<span class="token punctuation">]</span>: （直接回车确认即可）
+Listen on port                 <span class="token punctuation">[</span>29418<span class="token punctuation">]</span>: （直接回车确认即可）
+Generating SSH host key <span class="token punctuation">..</span>. rsa<span class="token punctuation">..</span>. dsa<span class="token punctuation">..</span>. ed25519<span class="token punctuation">..</span>. ecdsa 256<span class="token punctuation">..</span>. ecdsa 384<span class="token punctuation">..</span>. ecdsa 521<span class="token punctuation">..</span>. <span class="token keyword">done</span>
+
+*** HTTP Daemon
+*** 
+
+Behind reverse proxy           <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? （直接回车确认即可）
+Use SSL <span class="token punctuation">(</span>https://<span class="token punctuation">)</span>             <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? （直接回车确认即可）
+Listen on address              <span class="token punctuation">[</span>*<span class="token punctuation">]</span>: （直接回车确认即可）
+Listen on port                 <span class="token punctuation">[</span>8080<span class="token punctuation">]</span>: （直接回车确认即可）
+Canonical URL                  <span class="token punctuation">[</span>http://ubuntu:8080/<span class="token punctuation">]</span>: （直接回车确认即可）
+
+*** Cache
+*** 
+
+
+*** Plugins
+*** 
+
+Installing plugins.
+（是否安装插件，选择：【y】，这些插件是系统必需的）
+Install plugin commit-message-length-validator version v2.14.9 <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? y
+Install plugin download-commands version v2.14.9 <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? y
+Install plugin hooks version v2.14.9 <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? y
+Install plugin replication version v2.14.9 <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? y
+Install plugin reviewnotes version v2.14.9 <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? y
+Install plugin singleusergroup version v2.14.9 <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>? y
+Initializing plugins.
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br></div></div><div class="danger custom-block"><p class="custom-block-title">错误</p><p>若初始化出现问题，可以重复执行<code>init</code>命令，重新配置。</p></div><p>初始化后，<code>/home/gerrit/review_site/etc/gerrit.config</code>配置如下：</p><div class="language-hjson line-numbers-mode"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><pre class="language-text"><code>[gerrit]
+	basePath = git
+	serverId = dbd2d673-51c7-4542-8e88-5f28c0537589
+	canonicalWebUrl = http://localhost:8080/
+[database]
+	type = mysql
+	hostname = localhost
+	database = reviewdb
+	username = gerrit
+[download]
+        scheme = ssh
+[index]
+	type = LUCENE
+[auth]
+	type = OPENID
+#   用户登录方式，调试时可以修改为以下配置，线上不可使用
+#   type = development_become_any_account
+[receive]
+	enableSignedPush = false
+[sendemail]
+	smtpServer = localhost
+[container]
+	user = gerrit
+	javaHome = /usr/lib/jvm/java-8-oracle/jre
+[sshd]
+	listenAddress = *:29418
+[httpd]
+	listenUrl = http://*:8080/
+[cache]
+	directory = cache
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>配置文件参数，请参考 <a href="/gerrit/deploy.html" class="router-link-exact-active router-link-active">配置文件</a>。可以自己手动修改配置，然后重启系统：</p><div class="language-bash line-numbers-mode"><pre class="language-bash"><code>/home/gerrit/review_site/bin/gerrit.sh restart
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="域名配置"><a href="#域名配置" aria-hidden="true" class="header-anchor">#</a> 域名配置</h2><p>可见：【你的系统】-&gt;【Documentation】-&gt;【Table of Contents】-&gt;【
+Reverse Proxy】，或网上<a href="http://gerrit.aokp.co/Documentation/config-reverseproxy.html" target="_blank" rel="noopener noreferrer">别人的系统文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p><p><strong>1. Gerrit配置</strong></p><p>配置文件 <code>$site_path'/etc/gerrit.config</code> 修改以下配置：</p><div class="language- line-numbers-mode"><pre class="language-text"><code>[gerrit]
+        canonicalWebUrl = http://www.example.com/gerrit/
+[httpd]
+        listenUrl = proxy-http://*:8080/gerrit/
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>之后重启系统：<code>$site_path'/bin/gerrit.sh restart</code></p><p><strong>2. 代理配置</strong></p><h4 id="a-apache2"><a href="#a-apache2" aria-hidden="true" class="header-anchor">#</a> a) Apache2</h4><div class="tip custom-block"><p class="custom-block-title">提示</p><p>添加配置前，请安装Apache2:<code>sudo apt-get install apache2</code>。</p></div><ul><li>执行以下命令，确保所需模块被开启：</li></ul><div class="language- line-numbers-mode"><pre class="language-text"><code>sudo a2enmod proxy_http
+sudo a2enmod ssl # 可选，使用 HTTPS / SSL 时必需
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>修改配置文件<code>/etc/apache2/sites-available/000-default.conf</code>，添加端口转发（以下加黑部分）：</li></ul><div class="language- line-numbers-mode"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br></div><pre class="language-text"><code>&lt;VirtualHost *:80&gt;
+    # ... default settings ...
+
+    # Add gerrit proxy
+	ServerName www.example.com
+
+    ProxyRequests Off
+    ProxyVia Off
+    ProxyPreserveHost On
+
+    &lt;Proxy *&gt;
+      Order deny,allow
+      Allow from all
+    &lt;/Proxy&gt;
+
+    AllowEncodedSlashes On
+    ProxyPass /gerrit/ http://127.0.0.1:8080/gerrit/ nocanon
+&lt;/VirtualHost&gt;
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><ul><li>重启apache2：<code>sudo service apache2 restart</code></li></ul><p>之后访问网站+<code>/gerrit/</code>即可进入系统，如：<code>www.example.com/gerrit/</code></p><h4 id="b-nginx"><a href="#b-nginx" aria-hidden="true" class="header-anchor">#</a> b) Nginx</h4><p>配置如下：</p><div class="language- line-numbers-mode"><div class="highlight-lines"><br><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br></div><pre class="language-text"><code>server {
+  listen 80;
+  server_name review.example.com;
+
+  location /gerrit/ {
+    proxy_pass        http://127.0.0.1:8081;
+    proxy_set_header  X-Forwarded-For $remote_addr;
+    proxy_set_header  Host $host;
+  }
+}
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div><div class="page-edit"><div class="edit-link"><a href="https://github.com/linjinze999/blog-vuepress/edit/master/docs/gerrit/deploy.md" target="_blank" rel="noopener noreferrer">帮我改进此页</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><div class="last-updated"><span class="prefix">上次更新: </span><span class="time">2018-7-29 13:32:40</span></div></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/gerrit/" class="prev router-link-active">
+          Gerrit介绍
+        </a></span><span class="next"><a href="/gerrit/config.html">
+          系统配置
+        </a> →
+      </span></p></div><div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></div></div></div>
+    <script src="/assets/js/9.62a40464.js" defer></script><script src="/assets/js/app.6684e293.js" defer></script>
+  </body>
+</html>
